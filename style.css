@@ -77,7 +77,7 @@ body {
 }
 
 .card__btn:hover {
-    box-shadow: 0 0 3.2rem var(--Neon-Green);
+    box-shadow: 0 0 2rem var(--Neon-Green);
     transform: scale(1.20);
 }
 
