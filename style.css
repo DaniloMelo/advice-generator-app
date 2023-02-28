@@ -15,7 +15,6 @@
 body {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: 'Manrope', sans-serif;
@@ -27,21 +26,16 @@ body {
     border-radius: .5rem;
     padding: 3rem;
     width: 90%;
-    max-width: 900px;
+    max-width: 350px;
+    min-width: 350px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: relative;
 }
-
-/* .card__advice-number,
-.card__advice-number sapan{
-
-} */
 
 .card__advice-number {
     color: var(--Neon-Green)
@@ -53,11 +47,21 @@ body {
     align-items: center;
     justify-content: center;
     color: var(--Light-Cyan);
-    margin-top: 30px
+    margin-top: 30px;
 }
 
-.card__advice-text img {
+.card__advice-text{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card__text-divider-mobile {
     margin-top: 30px;
+    width: 100%;
+}
+
+.card__text-divider-desktop {
+    display: none;
 }
 
 .card__btn {
@@ -81,4 +85,23 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+    .card{
+        min-width: 550px;
+    }
+
+    .card__advice-text{
+        font-size: 1rem;
+    }
+    
+    .card__text-divider-mobile {
+        display: none;
+    }
+    
+    .card__text-divider-desktop {
+        display: block;
+        margin-top: 30px
+    }
 }
