@@ -72,6 +72,13 @@ body {
     background: var(--Neon-Green);
     position: absolute;
     bottom: -75px;
+    transform: scale(1);
+    transition: 200ms
+}
+
+.card__btn:hover {
+    box-shadow: 0 0 3.2rem var(--Neon-Green);
+    transform: scale(1.20);
 }
 
 .attribution {
