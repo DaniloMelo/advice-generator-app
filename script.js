@@ -3,12 +3,11 @@ const cardID = document.querySelector('#card__ID')
 const cardText = document.querySelector('.card__advice-text-content')
 
 cardBtn.addEventListener('click', () => {
-    fetch('https://api.adviceslip.com/advice?' + Math.random())
+    fetch('https://api.adviceslip.com/advice?' + Math.random()) 
         .then(response => response.json())
         .then(data => {
             cardID.textContent = `# ${data.slip.id}`;
             cardText.textContent = `"${data.slip.advice}"`
-            console.log(data);
         })
         .catch(error => alert('Something went wrong. Reload the page and try again'))
 })
